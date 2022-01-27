@@ -1,0 +1,93 @@
+# Encontrar todos los productos
+GET http://localhost:3030/productos
+
+###
+
+# Encontrar un producto por ID
+GET http://localhost:3030/productos/findProducto/1
+
+
+###
+
+# Crear un producto
+POST http://localhost:3030/productos/crearProducto
+Content-Type: application/json
+
+{
+    "nombre":"Gorra",
+    "numeroLote":10,
+    "precio":60000,
+    "cantidad":10,
+    "fechaIngreso":"2022-01-26"
+
+}
+
+###
+
+# Actualizar un Producto
+PUT http://localhost:3030/productos/updateProducto
+Content-Type: application/json
+
+{
+    "id":1,
+    "nombre":"Camisa",
+    "numeroLote":10,
+    "precio":90000,
+    "cantidad":10,
+    "fechaIngreso":"2022-01-26"
+
+}
+
+
+###
+
+# Eliminar un producto
+DELETE http://localhost:3030/productos/deleteProducto/2
+
+###
+
+# Crear un Usuario
+POST http://localhost:3030/productos/crearUsuario
+Content-Type: application/json
+
+{
+    "nombre":"Jose",
+    "apellido":"oliveros",
+    "usuario":"jose1998",
+    "contrasena":"1234",
+    "rol":1
+
+}
+
+###
+
+# Crear un Compra
+POST http://localhost:3030/productos/crearCompra/1
+Content-Type: application/json
+
+{
+    "comprasList":[
+                {
+                    "idProducto":1,
+                    "cantidad":20
+
+                },
+                {
+                    "idProducto":3,
+                    "cantidad":5
+
+                }
+            ]
+}
+
+
+###
+
+# Encontrar todos las compras
+GET http://localhost:3030/productos/traerCompras
+
+
+###
+
+# Encontrar compras por cliente
+GET http://localhost:3030/productos/compraByCliente/1
